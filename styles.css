@@ -16,11 +16,33 @@ main {
   grid-template-rows: repeat(5, 1fr);
   gap: 10px;
   padding: 10px;
+  justify-items: center;
+  align-items: center;
 }
 
-main > img {
-  animation: float 2s var(--ease-spring-2) var(--delay, 0) infinite;
+#imageContainer {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  padding: 10px;
+}
+
+#imageContainer img {
+  animation: none; /* Initially no animation */
   transition: scale 1s var(--ease-spring-2);
+}
+
+button {
+  grid-column: 1 / -1;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 @layer support {
